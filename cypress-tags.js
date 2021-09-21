@@ -103,9 +103,9 @@ function getOsSpecificExecutable(command) {
 }
 
 function getCypressExecutable() {
-  const command = getOsSpecificExecutable(`${__dirname}/../.bin/cypress`);
+  const command = getOsSpecificExecutable(`${__dirname}/../.bin/cy2`);
   // fallback to the globally installed cypress instead
-  return fs.existsSync(command) ? command : getOsSpecificExecutable("cypress");
+  return fs.existsSync(command) ? command : getOsSpecificExecutable("cy2");
 }
 
 try {
